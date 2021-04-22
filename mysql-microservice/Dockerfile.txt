@@ -1,0 +1,5 @@
+FROM mysql:5.6
+MAINTAINER ram "ramakoteswara.venkateswarlu@softsuave.com"
+#RUN apt-get update && apt-get install -y wget
+RUN mkdir -p /backup/xtrabackups
+COPY C:\Users\softsuave\Downloads\getting-started-docker-mysql-nodejs-master\getting-started-docker-mysql-nodejs-master\mysql-microservice/test-dump
