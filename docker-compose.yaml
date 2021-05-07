@@ -1,0 +1,28 @@
+version: '3.3'
+ 
+services:
+   db:
+     build: mysql-microservice
+     volumes:
+       - db_data:/usr/src/app
+     ports:
+       - "3306:3306"
+     restart: always
+           
+   nodejs:
+     depends_on:
+      - db
+     build: nodejs-microservice
+     ports:
+       - "4000:8000"
+     restart: always
+     environment:
+       MYSQL_DATABASE: test
+       MYSQL_USER: root
+       MYSQL_PASSWORD: password
+       MYSQL_HOST: db
+volumes:
+    db_data: {}
+
+       
+
