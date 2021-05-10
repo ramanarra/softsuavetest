@@ -6,7 +6,7 @@ services:
      volumes:
        - db_data:/usr/src/app
      ports:
-       - "3306:3306"
+       - "3307:3306"
      restart: always
            
    nodejs:
@@ -14,7 +14,7 @@ services:
       - db
      build: nodejs-microservice
      ports:
-       - "4000:8000"
+       - "4001:8000"
      restart: always
      environment:
        MYSQL_DATABASE: test
