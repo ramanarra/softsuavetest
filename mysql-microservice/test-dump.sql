@@ -1,6 +1,6 @@
 -- MySQL dump 10.13  Distrib 5.6.16, for debian-linux-gnu (x86_64)
 --
--- Host: localhost    Database: test
+-- Host: db    Database: test
 -- ------------------------------------------------------
 -- Server version	5.6.16-1~exp1
 
