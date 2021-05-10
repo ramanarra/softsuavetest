@@ -1,7 +1,8 @@
 FROM postgres:13
 MAINTAINER ram <ramakoteswara.venkateswarlu@softsuave.com>
-ENV MYSQL_DATABASE test
-ENV MYSQL_PASSWORD password  
+ENV POSTGRES_DATABASE test
+ENV POSTGRES_USER root
+ENV POSTGRES_PASSWORD password  
 WORKDIR /usr/src/app
 ADD  . /docker-entrypoint-initdb.d
 EXPOSE 3306
